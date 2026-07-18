@@ -67,7 +67,7 @@
     {
       "program_id": "infolinks",
       "name": "Infolinks",
-      "lane": "product_affiliate",
+      "lane": "display_ppc",
       "tier": "beginner",
       "niches": ["tech", "finance", "health", "lifestyle", "general"],
       "geos": ["us", "uk_eu", "global"],
