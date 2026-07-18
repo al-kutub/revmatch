@@ -1,0 +1,284 @@
+{
+  "version": 1,
+  "product": "revmatch",
+  "updated": "2026-07-18",
+  "notes": "Seed catalog for Phase 1. RPM bands are curated estimates from public network FAQs — not guarantees. Live referral_url values come from Ebrahim link-ops handoff (drop-in swap + link_status: live). Do not invent live referral links.",
+  "link_status_enum": ["live", "pending", "join_cta"],
+  "lanes": ["display_ppc", "product_affiliate"],
+  "tiers": ["beginner", "mid", "advanced"],
+  "traffic_tiers": ["under_10k", "10k_100k", "100k_1m", "1m_plus"],
+  "niches": ["tech", "finance", "health", "lifestyle", "general"],
+  "geos": ["us", "uk_eu", "global"],
+  "programs": [
+    {
+      "program_id": "propellerads",
+      "name": "PropellerAds",
+      "lane": "display_ppc",
+      "tier": "beginner",
+      "niches": ["tech", "lifestyle", "general"],
+      "geos": ["global", "us", "uk_eu"],
+      "traffic_fit": ["under_10k", "10k_100k", "100k_1m"],
+      "rpm_band": {
+        "min": 0.5,
+        "max": 3,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — push/onclick mix; geo-sensitive."
+      },
+      "referral_url": null,
+      "link_status": "join_cta",
+      "join_url": "https://propellerads.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Net-15/30 common; low minimums; beginner-friendly approval."
+    },
+    {
+      "program_id": "adsterra",
+      "name": "Adsterra",
+      "lane": "display_ppc",
+      "tier": "beginner",
+      "niches": ["tech", "lifestyle", "general"],
+      "geos": ["global", "us", "uk_eu"],
+      "traffic_fit": ["under_10k", "10k_100k", "100k_1m"],
+      "rpm_band": {
+        "min": 0.4,
+        "max": 2.5,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — social/pop formats; varies hard by geo."
+      },
+      "referral_url": null,
+      "link_status": "join_cta",
+      "join_url": "https://adsterra.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Weekly/on-demand options; good for early traffic tests."
+    },
+    {
+      "program_id": "infolinks",
+      "name": "Infolinks",
+      "lane": "product_affiliate",
+      "tier": "beginner",
+      "niches": ["tech", "finance", "health", "lifestyle", "general"],
+      "geos": ["us", "uk_eu", "global"],
+      "traffic_fit": ["under_10k", "10k_100k", "100k_1m", "1m_plus"],
+      "rpm_band": {
+        "min": 0.3,
+        "max": 4,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — in-text + display; content quality matters."
+      },
+      "referral_url": null,
+      "link_status": "join_cta",
+      "join_url": "https://www.infolinks.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Publisher network; low barrier; Net-45 typical."
+    },
+    {
+      "program_id": "skimlinks",
+      "name": "Skimlinks (Sovrn Commerce)",
+      "lane": "product_affiliate",
+      "tier": "beginner",
+      "niches": ["lifestyle", "tech", "health", "general"],
+      "geos": ["us", "uk_eu", "global"],
+      "traffic_fit": ["under_10k", "10k_100k", "100k_1m", "1m_plus"],
+      "rpm_band": {
+        "min": 1,
+        "max": 8,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — monetizes product links; depends on commerce intent."
+      },
+      "referral_url": null,
+      "link_status": "pending",
+      "join_url": "https://skimlinks.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Affiliate marketplace; pending link-ops signup handoff."
+    },
+    {
+      "program_id": "adcash",
+      "name": "Adcash",
+      "lane": "display_ppc",
+      "tier": "beginner",
+      "niches": ["tech", "lifestyle", "general"],
+      "geos": ["global", "uk_eu", "us"],
+      "traffic_fit": ["under_10k", "10k_100k", "100k_1m"],
+      "rpm_band": {
+        "min": 0.3,
+        "max": 2,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — multi-format ads; stronger outside top-tier geos sometimes."
+      },
+      "referral_url": null,
+      "link_status": "join_cta",
+      "join_url": "https://adcash.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Self-serve publisher; suitable for early display tests."
+    },
+    {
+      "program_id": "bidvertiser",
+      "name": "BidVertiser",
+      "lane": "display_ppc",
+      "tier": "beginner",
+      "niches": ["tech", "finance", "general"],
+      "geos": ["us", "global", "uk_eu"],
+      "traffic_fit": ["under_10k", "10k_100k"],
+      "rpm_band": {
+        "min": 0.2,
+        "max": 1.5,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — CPC/CPM mix; often lower floors, easy start."
+      },
+      "referral_url": null,
+      "link_status": "join_cta",
+      "join_url": "https://www.bidvertiser.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Long-running PPC network; low approval friction."
+    },
+    {
+      "program_id": "amazon_associates",
+      "name": "Amazon Associates",
+      "lane": "product_affiliate",
+      "tier": "beginner",
+      "niches": ["tech", "lifestyle", "health", "general"],
+      "geos": ["us", "uk_eu"],
+      "traffic_fit": ["under_10k", "10k_100k", "100k_1m", "1m_plus"],
+      "rpm_band": {
+        "min": 1,
+        "max": 12,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — commission on sales, not RPM; conversion-dependent."
+      },
+      "referral_url": null,
+      "link_status": "pending",
+      "join_url": "https://affiliate-program.amazon.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Account holder: Admin. Pending Associates approval + tag handoff from Ebrahim."
+    },
+    {
+      "program_id": "shareasale",
+      "name": "ShareASale",
+      "lane": "product_affiliate",
+      "tier": "mid",
+      "niches": ["lifestyle", "tech", "health", "finance"],
+      "geos": ["us", "uk_eu", "global"],
+      "traffic_fit": ["10k_100k", "100k_1m", "1m_plus"],
+      "rpm_band": {
+        "min": 2,
+        "max": 15,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — merchant mix; mid publishers with niche fit do better."
+      },
+      "referral_url": null,
+      "link_status": "pending",
+      "join_url": "https://www.shareasale.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Network approval + per-merchant accepts; pending link-ops."
+    },
+    {
+      "program_id": "ezoic",
+      "name": "Ezoic",
+      "lane": "display_ppc",
+      "tier": "mid",
+      "niches": ["tech", "lifestyle", "health", "general"],
+      "geos": ["us", "uk_eu", "global"],
+      "traffic_fit": ["10k_100k", "100k_1m", "1m_plus"],
+      "rpm_band": {
+        "min": 3,
+        "max": 20,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — apply-later mid tier; needs site quality + traffic."
+      },
+      "referral_url": null,
+      "link_status": "join_cta",
+      "join_url": "https://www.ezoic.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Advanced apply-later card — no fake live link. Site review required."
+    },
+    {
+      "program_id": "mediavine",
+      "name": "Mediavine",
+      "lane": "display_ppc",
+      "tier": "advanced",
+      "niches": ["lifestyle", "health", "general"],
+      "geos": ["us", "uk_eu"],
+      "traffic_fit": ["100k_1m", "1m_plus"],
+      "rpm_band": {
+        "min": 10,
+        "max": 40,
+        "currency": "USD",
+        "unit": "per_1000_views",
+        "estimate": true,
+        "note": "Estimate — high bar (~50k sessions/mo typical); apply-later only."
+      },
+      "referral_url": null,
+      "link_status": "join_cta",
+      "join_url": "https://www.mediavine.com/",
+      "tracking": {
+        "utm_source": "revmatch",
+        "utm_medium": "referral",
+        "utm_campaign": "phase1",
+        "ref": "revmatch"
+      },
+      "payout_notes": "Apply-later premium ad management — shown for mid/high traffic only."
+    }
+  ]
+}
