@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c1f1a" />
+  <meta name="description" content="Short integration guide for PropellerAds on RevMatch." />
+  <title>PropellerAds guide · RevMatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="bg" aria-hidden="true"></div>
+    <header class="top">
+      <a class="logo" href="../index.html" aria-label="RevMatch home">RevMatch</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../app.html">Matcher</a>
+        <a href="index.html">Guides</a>
+      </nav>
+    </header>
+    <main class="guide">
+      <p class="eyebrow">Integration guide</p>
+      <h1>PropellerAds</h1>
+      <p class="guide-meta">Display / PPC · Beginner · link status: join_cta</p>
+      <p class="lede lede--narrow">Net-15/30 common; low minimums; beginner-friendly approval.</p>
+
+      <h2>Quick start</h2>
+      <ol>
+        <li>Create a publisher account on the network’s site (use the Join CTA from your RevMatch shortlist).</li>
+        <li>Add your site or app and wait for approval if required.</li>
+        <li>Place the ad tags or script in a non-intrusive slot; start with one format.</li>
+        <li>Verify impressions in the network dashboard within 24–48 hours.</li>
+        <li>Tune placements for UX first — aggressive overlays hurt retention more than they help RPM.</li>
+      </ol>
+
+      <h2>Fit notes</h2>
+      <ul>
+        <li>Traffic fit: under_10k, 10k_100k, 100k_1m</li>
+        <li>Niches: tech, lifestyle, general</li>
+        <li>Geos: global, us, uk_eu</li>
+        <li>RPM band (estimate): $0.5–$3 USD</li>
+      </ul>
+      <p class="card-note">Estimate — push/onclick mix; geo-sensitive.</p>
+
+      <div class="cta-row" style="margin-top:1.5rem">
+        <a class="cta" href="https://propellerads.com/" target="_blank" rel="noopener noreferrer" id="guide-join">Open PropellerAds</a>
+        <a class="cta cta--ghost" href="../app.html#wizard">Back to matcher</a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <details class="disclosure-expand">
+        <summary>Some links may earn us a commission. See full disclosure.</summary>
+        <p>
+          RevMatch may earn commissions when you join or purchase through links we recommend.
+          Recommendations are based on fit for your traffic profile, not payment from networks for placement.
+          Always review each network’s terms before applying.
+        </p>
+      </details>
+      <p class="fineprint">© <span id="year"></span> RevMatch</p>
+    </footer>
+  </div>
+  <script src="../analytics.js"></script>
+  <script src="../rank.js"></script>
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+    RevMatchAnalytics.pageView({ page: "guide", program_id: "propellerads" });
+    (function () {
+      var a = document.getElementById("guide-join");
+      if (!a || !window.RevMatchRank) return;
+      var tracking = {"utm_source":"revmatch","utm_medium":"referral","utm_campaign":"phase1","ref":"revmatch"};
+      a.href = RevMatchRank.withTracking(a.getAttribute("href"), tracking);
+      a.addEventListener("click", function () {
+        RevMatchAnalytics.track("referral_click", {
+          program_id: "propellerads",
+          link_kind: "join_cta",
+          link_status: "join_cta",
+          href: a.href,
+          surface: "guide"
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

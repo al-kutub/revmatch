@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c1f1a" />
+  <meta name="description" content="Short integration guides for RevMatch affiliate programs." />
+  <title>Guides · RevMatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="bg" aria-hidden="true"></div>
+    <header class="top">
+      <a class="logo" href="../index.html" aria-label="RevMatch home">RevMatch</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../app.html">Matcher</a>
+        <a href="index.html">Guides</a>
+      </nav>
+    </header>
+    <main class="guide">
+      <p class="eyebrow">Phase 1</p>
+      <h1>Integration guides</h1>
+      <p class="lede lede--narrow">Short, practical steps per program. Use these after you get a shortlist from the matcher.</p>
+      <ul class="guide-list">
+      <li><a href="propellerads.html">PropellerAds<span>Display / PPC · Beginner</span></a></li>
+      <li><a href="adsterra.html">Adsterra<span>Display / PPC · Beginner</span></a></li>
+      <li><a href="infolinks.html">Infolinks<span>Display / PPC · Beginner</span></a></li>
+      <li><a href="skimlinks.html">Skimlinks (Sovrn Commerce)<span>Product affiliate · Beginner</span></a></li>
+      <li><a href="adcash.html">Adcash<span>Display / PPC · Beginner</span></a></li>
+      <li><a href="bidvertiser.html">BidVertiser<span>Display / PPC · Beginner</span></a></li>
+      <li><a href="amazon_associates.html">Amazon Associates<span>Product affiliate · Beginner</span></a></li>
+      <li><a href="shareasale.html">ShareASale<span>Product affiliate · Mid</span></a></li>
+      <li><a href="ezoic.html">Ezoic<span>Display / PPC · Mid</span></a></li>
+      <li><a href="mediavine.html">Mediavine<span>Display / PPC · Advanced</span></a></li>
+      </ul>
+    </main>
+    <footer class="site-footer">
+      <details class="disclosure-expand">
+        <summary>Some links may earn us a commission. See full disclosure.</summary>
+        <p>
+          RevMatch may earn commissions when you join or purchase through links we recommend.
+          Recommendations are based on fit for your traffic profile, not payment from networks for placement.
+          Always review each network’s terms before applying.
+        </p>
+      </details>
+      <p class="fineprint">© <span id="year"></span> RevMatch</p>
+    </footer>
+  </div>
+  <script src="../analytics.js"></script>
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+    RevMatchAnalytics.pageView({ page: "guides_index" });
+  </script>
+</body>
+</html>
