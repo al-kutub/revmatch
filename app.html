@@ -19,71 +19,81 @@
       <a class="logo" href="index.html" aria-label="RevMatch home">RevMatch</a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
+        <a href="guides/index.html">Guides</a>
       </nav>
     </header>
 
     <main class="wizard" id="wizard">
-      <p class="eyebrow">Matcher · stub</p>
+      <p class="eyebrow">Matcher</p>
       <h1>Find your fit</h1>
       <p class="lede lede--narrow">
-        The interactive wizard (traffic tier × niche × geo → ranked cards) ships in
-        Phase 1 Ticket 3. This page is the public stub so landing CTAs and affiliate
-        network applications have a stable URL now.
+        Three inputs. A ranked shortlist in under a minute. No account.
       </p>
 
-      <form class="wizard-form" action="#" method="get" aria-describedby="wizard-note">
+      <form class="wizard-form" id="wizard-form" action="#" method="get" aria-describedby="wizard-status">
         <label>
           <span>Traffic tier</span>
-          <select name="tier" disabled>
-            <option>Select…</option>
-            <option>Under 10k visits / mo</option>
-            <option>10k–100k</option>
-            <option>100k–1M</option>
-            <option>1M+</option>
+          <select name="tier" required disabled>
+            <option value="">Select…</option>
+            <option value="under_10k">Under 10k visits / mo</option>
+            <option value="10k_100k">10k–100k</option>
+            <option value="100k_1m">100k–1M</option>
+            <option value="1m_plus">1M+</option>
           </select>
         </label>
         <label>
           <span>Niche</span>
-          <select name="niche" disabled>
-            <option>Select…</option>
-            <option>Tech / SaaS</option>
-            <option>Finance</option>
-            <option>Health</option>
-            <option>Lifestyle</option>
-            <option>Other</option>
+          <select name="niche" required disabled>
+            <option value="">Select…</option>
+            <option value="tech">Tech / SaaS</option>
+            <option value="finance">Finance</option>
+            <option value="health">Health</option>
+            <option value="lifestyle">Lifestyle</option>
+            <option value="general">Other / general</option>
           </select>
         </label>
         <label>
           <span>Primary geo</span>
-          <select name="geo" disabled>
-            <option>Select…</option>
-            <option>US</option>
-            <option>UK / EU</option>
-            <option>Global / other</option>
+          <select name="geo" required disabled>
+            <option value="">Select…</option>
+            <option value="us">US</option>
+            <option value="uk_eu">UK / EU</option>
+            <option value="global">Global / other</option>
           </select>
         </label>
-        <button type="button" class="cta" disabled>Match programs</button>
+        <button type="submit" class="cta" id="match-btn" disabled>Match programs</button>
       </form>
 
-      <p class="wizard-note" id="wizard-note">
-        Inputs are disabled until the catalog + ranking rules land (Tickets 2–3).
-        Check back once those ship — same URL.
+      <p class="wizard-note" id="wizard-status" role="status" aria-live="polite">
+        Loading catalog…
       </p>
+
+      <section class="results" id="results" hidden aria-hidden="true" aria-labelledby="results-heading">
+        <div class="results-head">
+          <h2 id="results-heading">Your shortlist</h2>
+          <p class="results-summary" id="results-summary"></p>
+        </div>
+        <div class="results-list" id="results-list"></div>
+        <p class="results-footnote">
+          RPM bands are curated estimates, not guarantees. Always review each network’s terms before applying.
+        </p>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <p class="disclosure">
-        <strong>Advertising disclosure:</strong>
-        RevMatch may earn commissions from affiliate programs featured on this site
-        (including Amazon Associates where applicable). Recommendations are editorial;
-        we are not paid solely for ranking a program higher. This disclosure stub will
-        be expanded before paid traffic and FTC-facing campaigns go live.
-      </p>
+      <details class="disclosure-expand">
+        <summary>Some links may earn us a commission. See full disclosure.</summary>
+        <p>
+          RevMatch may earn commissions when you join or purchase through links we recommend.
+          Recommendations are based on fit for your traffic profile, not payment from networks for placement.
+          Always review each network’s terms before applying.
+        </p>
+      </details>
       <p class="fineprint">© <span id="year"></span> RevMatch · Static site · No account required</p>
     </footer>
   </div>
-  <script>
-    document.getElementById("year").textContent = String(new Date().getFullYear());
-  </script>
+  <script src="rank.js"></script>
+  <script src="analytics.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

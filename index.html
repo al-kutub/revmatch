@@ -19,6 +19,7 @@
       <a class="logo" href="index.html" aria-label="RevMatch home">RevMatch</a>
       <nav class="nav" aria-label="Primary">
         <a href="app.html">Matcher</a>
+        <a href="guides/index.html">Guides</a>
       </nav>
     </header>
 
@@ -30,7 +31,7 @@
         niche, and geo — we surface a short, ranked list of programs that actually fit.
       </p>
       <div class="cta-row">
-        <a class="cta" href="app.html#wizard">Start matching</a>
+        <a class="cta" href="app.html#wizard" id="landing-cta">Start matching</a>
         <a class="cta cta--ghost" href="#how">How it works</a>
       </div>
     </main>
@@ -65,18 +66,21 @@
     </section>
 
     <footer class="site-footer">
-      <p class="disclosure">
-        <strong>Advertising disclosure:</strong>
-        RevMatch may earn commissions from affiliate programs featured on this site
-        (including Amazon Associates where applicable). Recommendations are editorial;
-        we are not paid solely for ranking a program higher. This disclosure stub will
-        be expanded before paid traffic and FTC-facing campaigns go live.
-      </p>
+      <details class="disclosure-expand">
+        <summary>Some links may earn us a commission. See full disclosure.</summary>
+        <p>
+          RevMatch may earn commissions when you join or purchase through links we recommend.
+          Recommendations are based on fit for your traffic profile, not payment from networks for placement.
+          Always review each network’s terms before applying.
+        </p>
+      </details>
       <p class="fineprint">© <span id="year"></span> RevMatch · Static site · No account required</p>
     </footer>
   </div>
+  <script src="analytics.js"></script>
   <script>
     document.getElementById("year").textContent = String(new Date().getFullYear());
+    RevMatchAnalytics.pageView({ page: "landing" });
   </script>
 </body>
 </html>
